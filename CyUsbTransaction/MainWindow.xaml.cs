@@ -22,6 +22,10 @@ namespace CyUsbTransaction
         public MainWindow()
         {
             InitializeComponent();
+
+            byte[] src = new byte[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            byte[] dst = new byte[100];
+            Buffer.BlockCopy(dst, 0, src, 0, 20);
         }
     }
 }
